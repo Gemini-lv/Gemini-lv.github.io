@@ -190,9 +190,13 @@ export default function Home() {
             <p className="eyebrow">Contact</p>
             <h2 id="contact-title">欢迎交流研发、光纤传感与智能监测项目</h2>
           </div>
-          <a className="button button--primary" href={`mailto:${profile.email}`}>
-            {profile.email}
-          </a>
+          <div className="contact__links">
+            {profile.emails.map((email) => (
+              <a className="button button--primary" href={`mailto:${email}`} key={email}>
+                {email}
+              </a>
+            ))}
+          </div>
         </section>
       </main>
 

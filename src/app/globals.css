@@ -447,6 +447,14 @@ h3 {
   flex: 0 0 auto;
 }
 
+.contact__links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -522,5 +530,9 @@ h3 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact__links {
+    justify-content: flex-start;
   }
 }

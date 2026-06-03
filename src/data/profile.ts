@@ -5,7 +5,7 @@ export const profile = {
   headline: "把复杂现场数据变成可靠的研发决策",
   summary:
     "地球物理学与计算机科学双学位背景，博士阶段聚焦分布式光纤传感、环境地震学、AI 信号处理与工程化系统研发。当前负责物联传感方向研发项目推进，把算法、设备、现场数据与产品化交付连接起来。",
-  email: "lvhao@ztt.cn",
+  emails: ["lvhao@ztt.cn", "lh17@mails.ustc.edu.cn"],
   links: [
     {
       label: "ORCID",
