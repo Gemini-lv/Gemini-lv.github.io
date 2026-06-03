@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   color-scheme: light;
   --ink: #13202a;
@@ -8,9 +10,17 @@
   --teal: #0c8179;
   --teal-soft: #dff3ef;
   --gold: #b47a2a;
-  --blue: #244c7a;
   --shadow: 0 24px 70px rgba(18, 31, 42, 0.11);
   --radius: 8px;
+  --background: #eef3f2;
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Geist", "Geist Fallback", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
 }
 
 * {
@@ -23,9 +33,9 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
-  color: var(--ink);
-  background: #eef3f2;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
   line-height: 1.66;
 }
 
@@ -49,7 +59,7 @@ p {
   gap: 24px;
   padding: 18px clamp(20px, 5vw, 72px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #11272d;
+  background: rgba(17, 39, 45, 0.97);
   backdrop-filter: blur(14px);
   color: #f7fbfa;
 }
@@ -78,7 +88,6 @@ p {
   grid-template-columns: minmax(0, 0.94fr) minmax(360px, 0.64fr);
   align-items: center;
   gap: clamp(30px, 5vw, 72px);
-  min-height: auto;
   padding: clamp(54px, 7vw, 86px) clamp(20px, 5vw, 72px) clamp(46px, 6vw, 76px);
   background:
     linear-gradient(120deg, rgba(17, 39, 45, 0.96), rgba(20, 70, 73, 0.92)),
@@ -166,7 +175,6 @@ p {
 
 .button--ghost:hover {
   border-color: rgba(255, 255, 255, 0.72);
-  color: #fff;
 }
 
 .hero__visual {
@@ -352,8 +360,8 @@ h3 {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.82);
   color: #23323a;
-  font-weight: 760;
   font-size: 14px;
+  font-weight: 760;
 }
 
 .paper-tools {
@@ -375,7 +383,6 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: papers;
 }
 
 .paper-list article {
@@ -480,7 +487,6 @@ h3 {
   }
 
   .hero {
-    min-height: auto;
     padding: 38px 18px 34px;
   }
 
@@ -518,4 +524,3 @@ h3 {
     flex-direction: column;
   }
 }
-  color: #ffffff;

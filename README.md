@@ -1,17 +1,25 @@
 # 吕昊个人主页
 
-这是一个可直接部署到 GitHub Pages 的静态个人主页，内容根据简历整理，并加入当前身份：
+这是一个基于 Next.js App Router 重构的个人主页，适合部署到 Vercel。页面内容集中维护在 `src/data/profile.ts`，首页组件读取这些数据进行渲染。
 
 > 中天科技集团 · 江苏中天物联传感有限公司 · 研发项目经理
 
 ## 本地预览
 
-直接打开 `index.html`，或启动一个静态服务：
-
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-## GitHub Pages
+然后打开 `http://localhost:3000`。
 
-推荐将仓库命名为 `Gemini-lv.github.io`，推送到 GitHub 后即可通过 `https://Gemini-lv.github.io` 访问。
+## 常用命令
+
+```bash
+npm run lint
+npm run build
+```
+
+## Vercel 部署
+
+将仓库导入 Vercel 后，框架选择 Next.js，默认构建命令为 `npm run build`。本项目没有必需的环境变量。
